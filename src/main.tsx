@@ -1,7 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { App } from '@/app'
-import './index.css'
+import { Providers } from './helpers/providers'
+import { theme } from '@/ui/theme'
+import { ThemeProvider } from 'styled-components'
 
 const rootElement = document.querySelector('[data-js="root"]')
 
@@ -11,7 +13,11 @@ if (!rootElement) {
 
 const root = createRoot(rootElement)
 root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  <Providers>
+    <ThemeProvider theme={theme}>
+      <StrictMode>
+        <App />
+      </StrictMode>
+    </ThemeProvider>
+  </Providers>,
 )

@@ -1,43 +1,43 @@
-import { useState } from 'react'
-import { ReactComponent as Logo } from './logo.svg'
-import './app.css'
+import { ErrorBoundary } from 'react-error-boundary'
+import { ErrorBoundaryPage } from './pages/errorBoundary/errorBoundary'
+import { Routes, Route } from 'react-router-dom'
+import { SearchPage } from './pages/searchPage/searchPage'
+import { UserPage } from './pages/userPage/userPage'
+import { Text, Center, useColorMode, Switch } from '@chakra-ui/react'
+import { Header, DarkModeControl, Title, Label } from './ui/styles'
+import { useGlobalContext } from './helpers/contextGlobal'
 
 export function App () {
-  const [count, setCount] = useState(0)
+  const { colorMode, toggleColorMode } = useColorMode()
+  const { erro } = useGlobalContext()
 
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <Logo className='App-logo' title='logo' />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type='button' onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className='App-link'
-            href='https://vitejs.dev/guide/features.html'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <>
+      <Header>
+        <Title>GitHub profiles</Title>
+        <DarkModeControl>
+          <Label>Toggle {colorMode === 'light' ? 'Dark' : 'Light'}</Label>
+          <Switch onChange={toggleColorMode} />
+        </DarkModeControl>
+      </Header>
+      {erro && (
+        <Center>
+          <Text fontWeight='Bold' color='tomato'>
+            not found, try an other
+          </Text>
+        </Center>
+      )}
+      <Routes>
+        <Route path='/' element={<SearchPage />} />
+        <Route
+          path='user'
+          element={
+            <ErrorBoundary FallbackComponent={ErrorBoundaryPage}>
+              <UserPage />
+            </ErrorBoundary>
+          }
+        />
+      </Routes>
+    </>
   )
 }
