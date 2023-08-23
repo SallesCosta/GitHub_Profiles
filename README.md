@@ -1,4 +1,5 @@
-# GitHub Profiles Viewer
+# GitHub Profiles Viewer by NewCapital.in
+check it out [deployed version](https://escapps-github.netlify.app/)
 
 GitHub Profiles Viewer is a React application designed to explore user repositories on GitHub in a user-friendly manner.
 
