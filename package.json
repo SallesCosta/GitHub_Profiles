@@ -43,6 +43,23 @@
     "vite": "3.1.4",
     "vite-plugin-linter": "1.2.0",
     "vite-plugin-svgr": "2.2.1",
-    "vite-tsconfig-paths": "3.5.1"
+    "vite-tsconfig-paths": "3.5.1",
+    "@chakra-ui/icons": "^2.0.17",
+    "@chakra-ui/react": "^2.5.2",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@hookform/resolvers": "^3.0.0",
+    "@types/react-copy-to-clipboard": "^5.0.4",
+    "@types/styled-components": "^5.1.26",
+    "framer-motion": "^10.8.4",
+    "localforage": "1.10.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-error-boundary": "^4.0.0",
+    "react-hook-form": "^7.43.7",
+    "react-icons": "^4.8.0",
+    "react-router-dom": "^6.9.0",
+    "styled-components": "^5.3.9",
+    "vite-plugin-lint": "1.0.1",
+    "yup": "^1.0.2"
   }
 }
