@@ -1,121 +1,61 @@
-<h1 align="center">Boilerplate React.js + TypeScript + Vite 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="#" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-  </a>
-  <a href="https://twitter.com/fdaciuk" target="_blank">
-    <img alt="Twitter: fdaciuk" src="https://img.shields.io/twitter/follow/fdaciuk.svg?style=social" />
-  </a>
-</p>
+# GitHub Profiles Viewer
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+GitHub Profiles Viewer is a React application designed to explore user repositories on GitHub in a user-friendly manner.
 
-> Boilerplate to create React.js apps with Vite
+## Features
 
-## Which techs this boilerplate have in it?
+- Browse user repositories by submitting a username through a form.
+- Implement a pagination system that displays 9 repositories per page.
+- Display repository details on individual cards, including title, user description, and primary programming language.
 
-This boilerplate is ready to be used by devs who want to start a new project using React.js, TypeScript and Jest with Vite.
+## Technologies Used
 
-## Main configurations
+- React
+- TypeScript
+- Vite (Build Tool)
+- Styled-components
+- Chakra UI (Component Library)
+- Jest (Testing Framework)
+- React-Testing-Library
+- Husky (Git Hooks)
+- React-Router (Routing)
 
-- React.js 18+ with TypeScript;
-  - You can import "svgs" with `import { ReactComponent as MyIcon } from './icon-path.svg'`;
-  - You can import any other media (images, videos, etc) that is located inside `src` directory;
-  - You can use absolute imports, using `@` as `src` directory;
-- Eslint:
-  - [Standard](https://standardjs.com/) with some modifications;
-  - React Hooks and other React configurations with [eslint-config-react-app](https://www.npmjs.com/package/eslint-config-react-app) (same used in Create React App);
-- Automatic lint and type-checking with Husky before every commit.
+## Project Architecture
 
-## Usage
+The project architecture is organized into the following folders:
 
-Install the dependencies:
+- `src/pages`: Contains the page components.
+- `src/ui`: Houses the reusable UI components.
+- `src/helpers`: Holds utility/helper functions.
+- `src/components`: Contains components used across multiple pages.
 
-```sh
-yarn install
-```
+## Target Audience
 
-Run dev server:
+This application is tailored for users who want to conveniently visualize a GitHub user's repository list through an aesthetically pleasing interface.
 
-```sh
-yarn dev
-```
+## Challenges
 
-You can run type-checking in watch mode in another terminal, if you may:
+The development process did not encounter any major challenges.
 
-```sh
-yarn type-check --watch
-```
+## State Management
 
-## Run tests
+The application utilizes the Context API for state management, reducing unnecessary prop-drilling.
 
-```sh
-yarn test
-```
+## Responsiveness
 
-## Production version
+The application is responsive with breakpoints set at `1030px` and `1215px`. It follows a "mobile-first" design approach, adapting smoothly for screens smaller than `1030px`.
 
-To generate the production version, you can run:
+## Getting Started
 
-```sh
-yarn build
-```
+To run the project locally, follow these steps:
 
-All files you have to deploy will be located at the `dist` directory.
+1. Clone this repository.
+2. Navigate to the project folder: `cd GitHub-Profiles`.
+3. Install dependencies: `yarn`.
+4. Start the development server: `yarn dev`.
+5. Access the application at: `http://localhost:3000`.
 
-### Run production version locally
+Feel free to explore and enhance the application as needed. If you encounter any issues or have suggestions, please open an issue or submit a pull request.
 
-To check if everything will be ok in production before the deployment, you can run this command after `yarn build`:
+Happy coding!
 
-```sh
-yarn preview
-```
-
-## Author
-
-👤 **Fernando Daciuk**
-
-* Website: https://daciuk.dev
-* Twitter: [@fdaciuk](https://twitter.com/fdaciuk)
-* Github: [@fdaciuk](https://github.com/fdaciuk)
-* LinkedIn: [@fdaciuk](https://linkedin.com/in/fdaciuk)
-* Instagram : [@fdaciuk](https://instagram.com/fdaciuk)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/fdaciuk/boilerplate-vite-react/issues). 
-
-## ✨ Contributors
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/fdaciuk"><img src="https://avatars.githubusercontent.com/u/487669?v=4?s=100" width="100px;" alt="Fernando Daciuk"/><br /><sub><b>Fernando Daciuk</b></sub></a><br /><a href="https://github.com/fdaciuk/boilerplate-vite-react/commits?author=fdaciuk" title="Code">💻</a> <a href="https://github.com/fdaciuk/boilerplate-vite-react/commits?author=fdaciuk" title="Documentation">📖</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/gabepinheiro"><img src="https://avatars.githubusercontent.com/u/45916330?v=4?s=100" width="100px;" alt="Gabriel Pinheiro"/><br /><sub><b>Gabriel Pinheiro</b></sub></a><br /><a href="https://github.com/fdaciuk/boilerplate-vite-react/commits?author=gabepinheiro" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://newcapital.in@gmail.com"><img src="https://avatars.githubusercontent.com/u/81476236?v=4?s=100" width="100px;" alt="NewCapital.in"/><br /><sub><b>NewCapital.in</b></sub></a><br /><a href="https://github.com/fdaciuk/boilerplate-vite-react/commits?author=SallesCosta" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://vinibispo.com.br"><img src="https://avatars.githubusercontent.com/u/48097622?v=4?s=100" width="100px;" alt="Vinícius Bispo"/><br /><sub><b>Vinícius Bispo</b></sub></a><br /><a href="https://github.com/fdaciuk/boilerplate-vite-react/commits?author=vinibispo" title="Code">💻</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
